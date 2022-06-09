@@ -1,0 +1,10 @@
+services:
+  client:
+    build:
+      context: ./
+      target: client-dev
+    volumes:
+      - ./ui:/ui
+      - ${HOME}/.npm:/root/.npm
+    ports:
+      - 3000:3000
