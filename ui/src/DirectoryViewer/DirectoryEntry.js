@@ -14,19 +14,23 @@ export const DirectoryEntry = ({ entry, onDirClick, onFileView, onSaveClick }) =
           &nbsp;
           (<FileSizeDisplay filesize={ entry.filesize } />)
 
-          { entry.filesize > 1048576 ? (
-            <Tooltip title="File too large (1MB max)" placement="top" arrow>
-              <span>
-                <Button onClick={onFileView} disabled>View</Button>
-              </span>
-            </Tooltip>
-          ) : (
-            <Button onClick={onFileView}>View</Button>
+          { onFileView && (
+            <>
+              { entry.filesize > 1048576 ? (
+                <Tooltip title="File too large (1MB max)" placement="top" arrow>
+                  <span>
+                    <Button onClick={onFileView} disabled>View</Button>
+                  </span>
+                </Tooltip>
+              ) : (
+                <Button onClick={onFileView}>View</Button>
+              )}            
+            </>
           )}
         </span>
       )}
 
-      <Button onClick={onSaveClick}>Save</Button>
+      { onSaveClick && <Button onClick={onSaveClick}>Copy</Button> }
     </li>
   );
 }

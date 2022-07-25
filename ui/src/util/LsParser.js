@@ -1,5 +1,5 @@
 export const parseLsOutput = (lsOutput) => {
-  console.log(lsOutput);
+  // console.log(lsOutput);
   return lsOutput.split("\n")
     .map((line, indx) => {
       const parts = line.trim().split(/\s+/);

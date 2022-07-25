@@ -2,7 +2,7 @@
   "icon": "docker.svg",
   "ui": {
     "dashboard-tab": {
-      "title": "Container File Viewer",
+      "title": "Image Builder",
       "root": "ui",
       "src": "index.html"
     }

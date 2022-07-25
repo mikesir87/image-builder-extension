@@ -1,4 +1,4 @@
-IMAGE?=mikesir87/container-fs-viewer
+IMAGE?=mikesir87/image-builder-extension
 TAG?=latest
 
 BUILDER=buildx-multi-arch
